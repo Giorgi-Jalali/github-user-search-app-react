@@ -1,5 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { useState, useEffect } from "react";
 
 import Header from "./Header";
@@ -18,24 +19,33 @@ export default function App() {
   }, []);
 
   return (
-    <Main lightMode={lightMode}>
-      <Header lightMode={lightMode} setLightMode={setLightMode} />
-      <SearchContainer
-        user={user}
-        setUser={setUser}
-        data={data}
-        setData={setData}
-        lightMode={lightMode}
-        setLightMode={setLightMode}
-      />
-      <UserContainer
-        lightMode={lightMode}
-        setLightMode={setLightMode}
-        data={data}
-      />
-    </Main>
+    <>
+      <GlobalStyle lightMode={lightMode} />
+      <Main lightMode={lightMode}>
+        <Header lightMode={lightMode} setLightMode={setLightMode} />
+        <SearchContainer
+          user={user}
+          setUser={setUser}
+          data={data}
+          setData={setData}
+          lightMode={lightMode}
+          setLightMode={setLightMode}
+        />
+        <UserContainer
+          lightMode={lightMode}
+          setLightMode={setLightMode}
+          data={data}
+        />
+      </Main>
+    </>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${(props) => (props.lightMode ? "#F6F8FF" : "#141d2f")};
+  }
+`;
 
 const Main = styled.div`
   background: ${(props) => (props.lightMode ? "#F6F8FF" : "#141d2f")};
