@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sun-moon {
+  margin-Left: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-icon {
+  width: "17px";
+  height: "17px";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.user-id {
+  color: #0079FF;
+}
+
+.name-date {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  line-height: 25px;
+}
+
+p.stat-nums {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contact-info {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-text {
+  margin-left:  12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  text-decoration: none;
+  color: rgb(8, 130, 137)
+}
+
+@media screen and (min-width: 700px) {
+  .search-icon {
+    width: "21px";
+    height: "21px";
   }
-  to {
-    transform: rotate(360deg);
+
+  .user-image {
+    width: 117px;
+    height: 117px;
+    margin-right: 40px;
   }
+
+  .name-date {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .user-id {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .date {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  p.stat-nums {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-info {
+    max-width: 250px;
+  }
+
+  .icon-text {
+    margin-left:  18px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .name-date {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .user-div {
+    padding-left: 150px;
+    margin-top: -30px;
+  }
+
+  .user-image {
+    margin-right: 32px;
+  }
+
+  h1 {
+    line-height: 30px;
+  }
+
+  .date {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+  }
+
 }
